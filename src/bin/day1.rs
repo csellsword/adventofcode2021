@@ -19,6 +19,7 @@ fn main() -> io::Result<()> {
         },
     };
 
+    // Kojo and friends pointed out this is a left fold, which is probably a better way to type this
     let mut count = 0;
     while let Some(line) = lines.next() {
         let curr = line.unwrap().parse::<u64>().unwrap();
